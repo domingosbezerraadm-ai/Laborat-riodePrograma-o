@@ -10,7 +10,7 @@ Atividade Avaliativa 01
      Este projeto tem como objetivo desenvolver um sistema de gerenciamento de estacionamento rotativo, similares aos utilizados em shoppings e lojas em centros comerciais.
      O sistema calcula o valor a ser pago com base no tipo de veículo e no tempo de permanência, aplicando regras como valor mínimo, descontos e multas.
      
- **1 Análise do Problema:**
+ **1.Análise do Problema:**
      No Estacionamento rotativo, o tempo de permanência determina o valor a ser pago pelo cliente, assim como o tipo de veículo. Sendo o sistema precisa receber as seguintes informações:
      * Tipo do veículo;
      * Tempo de permanência;
@@ -52,7 +52,7 @@ Atividade Avaliativa 01
    8 - Verificar e aplicar multa (if)
    9 - Calcular o valor final;
    10 - Exibir os resultados;
-/*
+*/
 ├── main.c
 #include <stdio.h>
 
@@ -124,7 +124,7 @@ int main() {
 
     return 0;
 }        
-**4. Fluxogramadoprocessamento:**
+**4. Fluxograma do processamento:**
      ## 🔀 Fluxograma do Sistema
 
 ```mermaid
