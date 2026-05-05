@@ -38,7 +38,7 @@ Atividade Avaliativa 01
     - Até 1 hora → cobrança mínima de 1 hora
     - Acima de 5 horas → desconto de 10%
     - Acima de 10 horas → acréscimo de multa de R$ 20,00
-     
+        
 **4. Fluxogramadoprocessamento:**
      ## 🔀 Fluxograma do Sistema
 
@@ -87,3 +87,90 @@ S[valorFinal = valorBase - desconto + multa]
 S --> T[Exibir resultados]
 
 T --> U[Fim]
+
+ **- Parte 2 – Implementação em C**
+ - Lógica do Programa:
+   1 - Ler a placa do veículo;
+   2 - Ler o tipo do veículo;
+   3 - Ler o tempo de permanência;
+   4 - Definir o valor da hora (usando switch-case);
+   5 - Garantir tempo mínimo de 1 hora (if);
+   6 - Calcular o valor base;
+   7 - Verificar e aplicar desconto (if);
+   8 - Verificar e aplicar multa (if)
+   9 - Calcular o valor final;
+   10 - Exibir os resultados;
+
+├── main.c
+#include <stdio.h>
+
+int main() {
+    char placa[10];
+    int tipo;
+    float horas;
+    float valorHora = 0;
+    float valorBase, desconto = 0, multa = 0, valorFinal;
+
+    printf("Digite a placa: ");
+    scanf("%s", placa);
+
+    printf("Tipo de veiculo (1-Carro, 2-Moto, 3-Caminhonete): ");
+    scanf("%d", &tipo);
+
+    printf("Tempo de permanencia (horas): ");
+    scanf("%f", &horas);
+
+    // Definição do valor por hora
+    switch(tipo) {
+        case 1:
+            valorHora = 5;
+            break;
+        case 2:
+            valorHora = 3;
+            break;
+        case 3:
+            valorHora = 8;
+            break;
+        default:
+            printf("Tipo invalido.\n");
+            return 0;
+    }
+
+    // Regra de mínimo
+    if (horas < 1) {
+        horas = 1;
+    }
+
+    valorBase = horas * valorHora;
+
+    // Desconto
+    if (horas > 5) {
+        desconto = valorBase * 0.10;
+    }
+
+    // Multa
+    if (horas > 10) {
+        multa = 20;
+    }
+
+    valorFinal = valorBase - desconto + multa;
+
+    printf("\n--- RESULTADO ---\n");
+    printf("Placa: %s\n", placa);
+
+    switch(tipo) {
+        case 1: printf("Tipo: Carro\n"); break;
+        case 2: printf("Tipo: Moto\n"); break;
+        case 3: printf("Tipo: Caminhonete\n"); break;
+    }
+
+    printf("Horas: %.2f\n", horas);
+    printf("Valor Base: R$ %.2f\n", valorBase);
+    printf("Desconto: R$ %.2f\n", desconto);
+    printf("Multa: R$ %.2f\n", multa);
+    printf("Valor Final: R$ %.2f\n", valorFinal);
+
+    return 0;
+}
+
+
