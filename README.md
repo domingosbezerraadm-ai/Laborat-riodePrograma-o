@@ -88,7 +88,7 @@ S[valorFinal = valorBase - desconto + multa]
 S --> T[Exibir resultados]
 
 T --> U[Fim]
-
+NEWLINE
 
  /**- Parte 2 – Implementação em C**
  - Lógica do Programa:
