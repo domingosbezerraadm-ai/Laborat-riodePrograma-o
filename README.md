@@ -58,15 +58,14 @@ Atividade Avaliativa 01
 #include <stdio.h>
 
 int main() {
+    //Declaração de variáveis
     char placa[6];
     int tipo;
-    float horas;
-    float valorHora = 0;
-    float valorBase, desconto = 0, multa = 0, valorFinal;
+    float horas, valorHora = 0, valorBase, desconto = 0, multa = 0, valorFinal=0;
 
-    printf("Digite a placa: ");
-    scanf("%s", placa);
-
+    printf("Digite a placa(5 caracteres): ");
+    scanf("%5s", placa);
+    //Criação do menu de opções
     printf("Tipo de veiculo (1-Carro, 2-Moto, 3-Caminhonete): ");
     scanf("%d", &tipo);
 
@@ -101,7 +100,7 @@ int main() {
         desconto = valorBase * 0.10;
     }
 
-    // Multa
+    // Calculo da multa
     if (horas > 10) {
         multa = 20;
     }
@@ -112,11 +111,14 @@ int main() {
     printf("Placa: %s\n", placa);
 
     switch(tipo) {
-        case 1: printf("Tipo: Carro\n"); break;
-        case 2: printf("Tipo: Moto\n"); break;
-        case 3: printf("Tipo: Caminhonete\n"); break;
+        case 1: printf("Tipo: Carro\n"); 
+        break;
+        case 2: printf("Tipo: Moto\n"); 
+        break;
+        case 3: printf("Tipo: Caminhonete\n"); 
+        break;
     }
-
+    //Mostrando os resultados na tela
     printf("Horas: %.2f\n", horas);
     printf("Valor Base: R$ %.2f\n", valorBase);
     printf("Desconto: R$ %.2f\n", desconto);
