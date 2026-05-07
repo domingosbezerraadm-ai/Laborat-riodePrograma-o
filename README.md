@@ -40,7 +40,7 @@ Atividade Avaliativa 01
     - Acima de 5 horas → desconto de 10%
     - Acima de 10 horas → acréscimo de multa de R$ 20,00
 
- /**- Parte 2 – Implementação em C**
+ **- Parte 2 – Implementação em C**
  - Lógica do Programa:
    1 - Ler a placa do veículo;
    2 - Ler o tipo do veículo;
@@ -52,7 +52,7 @@ Atividade Avaliativa 01
    8 - Verificar e aplicar multa (if)
    9 - Calcular o valor final;
    10 - Exibir os resultados;
-*/
+
 ├── main.c
 
 #include <stdio.h>
