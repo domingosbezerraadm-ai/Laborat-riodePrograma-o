@@ -54,10 +54,11 @@ Atividade Avaliativa 01
    10 - Exibir os resultados;
 */
 ├── main.c
+
 #include <stdio.h>
 
 int main() {
-    char placa[10];
+    char placa[6];
     int tipo;
     float horas;
     float valorHora = 0;
